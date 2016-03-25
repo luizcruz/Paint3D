@@ -1,5 +1,5 @@
 # Paint3D
-First program write in Processing language. 
+First simple program written in Processing language. 
 
 ##Commands
 
