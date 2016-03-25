@@ -1,4 +1,8 @@
-
+/**
+*  Paint 3D - Processing Language (First Program!)
+*  Author: Luiz Cruz
+*  Date: 25/03/2016
+**/
 
 void setup() {
   size(1024, 768);
