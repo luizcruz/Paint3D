@@ -1,16 +1,23 @@
 /**
 *  Paint 3D - Processing Language (First Program!)
 *  Author: Luiz Cruz
-*  Date: 25/03/2016
+*  Last Update: 01/04/2016
 **/
-
+  
+  
+int sizeX = 30;
+int sizeY = 30;
+boolean pointed = true;
+  
+  
 void setup() {
   size(1024, 768);
   background(255);
-  
 }
 
 void draw() {
+  
+
   if (mousePressed && (mouseButton == LEFT)) {
     int r = (int) random(255);
     int g = (int) random(255);
@@ -28,8 +35,27 @@ void draw() {
        size(1024, 768);
        background(255);
     }
+    if(key == CODED){
+      if (keyCode == UP){
+        pointed = false;
+        sizeX = sizeX+10;
+        sizeY = sizeY+10;
+        pointed = true;
+      }
+      if(keyCode == DOWN)
+      {
+        pointed = false;
+        sizeX = sizeX-1;
+        sizeY = sizeY-1;
+        pointed = true;
+      }
+    }
   }
-
-  ellipse(mouseX, mouseY, 40, 40);
+ 
+  if (pointed)
+  {
+   stroke(255);
+    ellipse(mouseX, mouseY, sizeX, sizeY);
+  }
 
 }
