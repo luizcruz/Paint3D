@@ -35,6 +35,17 @@ void draw() {
        size(1024, 768);
        background(255);
     }
+    if (keyPressed) {
+      if (key == 'e' || key == 'E') {
+       if(pointed){
+          pointed = false;
+       }
+       else{
+        pointed = true;
+       }
+       
+      }
+    }
     if(key == CODED){
       if (keyCode == UP){
         pointed = false;
@@ -54,7 +65,8 @@ void draw() {
  
   if (pointed)
   {
-   stroke(255);
+   stroke(0);
+   strokeWeight(0.1);
     ellipse(mouseX, mouseY, sizeX, sizeY);
   }
 
